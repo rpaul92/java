@@ -19,14 +19,8 @@ public class PostfixEvaluator extends Evaluator {
    */
   public void evaluate_step(String token) throws Exception {
     if (isOperand(token)) {
-      // TODO: What do we do if the token is an operand?
-      stack.push(Integer.parseInt(token));
-    } else {
-      /* TODO: What do we do if the token is an operator?
-               If the expression is invalid, make sure you throw
-               an exception with the correct message
-       */ 
-      
+            stack.push(Integer.parseInt(token));
+    } else {      
       String operator = token;
       Integer A;
       Integer B;

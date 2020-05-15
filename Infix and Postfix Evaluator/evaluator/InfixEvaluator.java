@@ -25,17 +25,8 @@ public class InfixEvaluator extends Evaluator {
    */
   public void evaluate_step(String token) throws Exception {
     if (isOperand(token)) {
-      // TODO: What do we do if the token is an operand?
-      operands.push(Integer.parseInt(token));
+            operands.push(Integer.parseInt(token));
     } else {
-      /* TODO: What do we do if the token is an operator?
-               If the expression is invalid, make sure you throw
-               an exception with the correct message.
-
-               You can call precedence(token) to get the precedence
-               value of an operator. It's already defined in 
-               the Evaluator class.
-       */ 
       String oper = token;
       
       if(oper.equals("(")) {
@@ -53,7 +44,7 @@ public class InfixEvaluator extends Evaluator {
             throw new Exception("missing (");
           }
         }
-        operators.pop(); //check to make sure this is in right spot
+        operators.pop(); 
       }
       
       else {
@@ -158,7 +149,7 @@ public class InfixEvaluator extends Evaluator {
       evaluate_step(token);
     }
 
-    /* TODO: what do we do after all tokens have been processed? */
+    
     while(operators.count != 0) {
       process_operator();
     }

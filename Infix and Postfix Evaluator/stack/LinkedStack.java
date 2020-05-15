@@ -9,14 +9,12 @@ public class LinkedStack<T> {
   public LLNode<T> index; //the top of the stack
   public int count; //keeps track of the amount of stuff in the stack
 
-  // TODO: define class variables here
 
   /**
    * Remove and return the top element on this stack.
    * If stack is empty, return null (instead of throw exception)
    */
   public T pop() {
-    // TODO
     if (!isEmpty()) {
       T element = index.info;
       index = index.link;
@@ -31,7 +29,6 @@ public class LinkedStack<T> {
    * If stack is empty, return null (instead of throw exception)
    */
   public T top() {
-    // TODO
     if (isEmpty()) {return null;}
     return index.info;
   }
@@ -40,7 +37,6 @@ public class LinkedStack<T> {
    * Return true if the stack is empty and false otherwise.
    */
   public boolean isEmpty() {
-    // TODO
     return index == null;
   }
 
@@ -48,7 +44,6 @@ public class LinkedStack<T> {
    * Return the number of elements in this stack.
    */
   public int size() {
-    // TODO
     return count;
   }
 
@@ -56,7 +51,6 @@ public class LinkedStack<T> {
    * Pushes a new element to the top of this stack.
    */
   public void push(T elem) {
-    // TODO
     LLNode<T> node = new LLNode<T>(elem);
    
     node.link = index;
